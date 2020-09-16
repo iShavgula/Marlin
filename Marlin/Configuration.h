@@ -1148,7 +1148,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS 254
 #define Y_MAX_POS 212.5
-#define Z_MAX_POS 210
+#define Z_MAX_POS 285
 
 /**
  * Software Endstops
@@ -1654,7 +1654,7 @@
  *
  * View the current statistics with M78.
  */
-#define PRINTCOUNTER
+// #define PRINTCOUNTER
 
 /**
  * Password
