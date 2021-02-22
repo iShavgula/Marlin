@@ -103,13 +103,13 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 3
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 -1
+// #define SERIAL_PORT_2 -1
 
 /**
  * This setting determines the communication speed of the printer.
@@ -120,7 +120,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -131,7 +131,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "MK3s"
+#define CUSTOM_MACHINE_NAME "MK3s yo"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -141,7 +141,7 @@
 
 // This defines the number of extruders
 // :[0, 1, 2, 3, 4, 5, 6, 7, 8]
-#define EXTRUDERS 1
+#define EXTRUDERS 5
 
 // Generally expected filament diameter (1.75, 2.85, 3.0, ...). Used for Volumetric, Filament Width Sensor, etc.
 #define DEFAULT_NOMINAL_FILAMENT_DIA 1.75
@@ -183,7 +183,7 @@
  *
  * For additional configuration see Configuration_adv.h
  */
-//#define PRUSA_MMU2
+#define PRUSA_MMU2
 
 // A dual extruder that uses a single stepper motor
 //#define SWITCHING_EXTRUDER
@@ -500,9 +500,9 @@
     #define DEFAULT_Kd_LIST { 114.00, 114.00 }
   #else
     // BTT002 MK3S
-    #define DEFAULT_Kp 16.13
-    #define DEFAULT_Ki 1.1625
-    #define DEFAULT_Kd 56.23
+    #define DEFAULT_Kp 13.19
+    #define DEFAULT_Ki 0.68
+    #define DEFAULT_Kd 63.58
   #endif
 #endif // PIDTEMP
 
@@ -743,7 +743,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 280 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 277 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -988,7 +988,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 23, 5, -2.10 }
+#define NOZZLE_TO_PROBE_OFFSET { 23, 5, -2.165 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
